@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="반려견과 함께 머무는 가평 애견동반펜션 멍이랑">
+  <title>멍이랑 | Pet-friendly resort</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="script/main.js" defer></script>
+  <script src="script/login.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header>
+    <div class="utility">
+      <a href="login.html">로그인</a>
+      <span>|</span>
+
+      <a href="signup.html">회원가입</a>
+      <span>|</span>
+
+      <a href="#">예약확인</a>
+      <span>|</span>
+
+      <button type="button" class="language-btn">
+        <span>KR</span>
+        <img src="img/icon_down.png" alt="">
+      </button>
+    </div>
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="멍이랑 홈">
+        <img src="img/Logo.png" alt="멍이랑">
+      </a>
+      <nav class="main-nav" aria-label="주요 메뉴">
+        <a href="#rooms">객실</a>
+        <a href="#facilities">시설</a>
+        <a href="#experience">특별한 경험</a>
+        <a href="#guide">이용 안내</a>
+        <a href="#footer">커뮤니티</a>
+      </nav>
+      <a class="btn btn-primary header-book" href="#booking">예약하기</a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        <b class="blind">메뉴</b>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="모바일 메뉴">
+      <a href="#rooms">객실</a>
+      <a href="#facilities">시설</a>
+      <a href="#experience">특별한 경험</a>
+      <a href="#guide">이용 안내</a>
+      <a href="#booking">예약하기</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- main banner -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-slides" aria-live="polite">
+        <img class="hero-image" src="img/01-main-hero-pension.png" alt="푸른 정원과 산을 마주한 멍이랑 펜션">
+        <img class="hero-image" src="img/02-about-lounge.png" alt="">
+        <img class="hero-image" src="img/03-room-ocean-suite.png" alt="">
+        <img class="hero-image" src="img/06-special-pool.png" alt="">
+        <img class="hero-image" src="img/08-special-playground.png" alt="">
+        <img class="hero-image" src="img/11-special-rooftop-cafe.png" alt="">
+      </div>  
+      <div class="hero-copy content-width">
+        <p class="eyebrow">PET-FRIENDLY RESORT</p>
+        <h1 id="hero-title">함께라서,<br>더 특별한 여행</h1>
+        <p>반려견과 나란히 머무는 가장 편안한 하루</p>
+      </div>
+      <p class="hero-side">MUNGIRANG · GAPYEONG</p>
+      <div class="hero-controls" aria-label="메인 배너 제어">
+        <button class="hero-arrow hero-prev" type="button" aria-label="이전 배너">←</button>
+        <div class="hero-dots" role="tablist" aria-label="배너 선택"></div>
+        <button class="hero-arrow hero-next" type="button" aria-label="다음 배너">→</button>
+      </div>
+    </section>
+
+    <!-- 여행 조건을 알려주세요 -->
+    <div class="booking-bar content-width" id="booking">
+      <div class="booking-title">
+        <span class="eyebrow">QUICK RESERVATION</span>
+        <strong>여행 조건을 알려주세요</strong>
+      </div>
+      <label>
+        <span>체크인</span>
+        <input type="date" value="2026-10-08">
+      </label>
+      <label>
+        <span>체크아웃</span>
+        <input type="date" value="2026-10-09">
+      </label>
+      <label>
+        <span>인원</span>
+        <select>
+          <option>2명</option>
+          <option>3명</option>
+          <option>4명</option>
+          <option>5명</option>
+          <option>6명</option>
+        </select>
+      </label>
+      <label>
+        <span>반려견</span>
+        <select>
+          <option>1마리</option>
+          <option>2마리</option>
+          <option>3마리</option>
+          <option>4마리</option>
+          <option>5마리</option>
+        </select>
+      </label>
+      <button class="btn btn-primary" type="submit">객실 검색</button>
+    </div>
+
+    <!-- 멍이랑 이야기 -->
+    <section class="about section content-width" id="experience">
+      <div class="about-copy">
+        <p class="eyebrow">OUR POINT OF VIEW</p>
+        <h2>사랑하는 반려견과<br>머무는 특별한 공간</h2>
+        <p>
+          함께 뛰고, 쉬고, 오래 기억할 수 있는<br>
+          편안한 여행을 제안합니다.
+        </p>
+        <a class="btn btn-dark" href="#guide">멍이랑 이야기</a>
+      </div>
+      <div class="about-visual image-frame">
+        <img src="img/02-about-lounge.png" alt="햇살이 들어오는 멍이랑 라운지">
+      </div>
+    </section>
+
+    <!-- 객실 미리보기 및 비교 -->
+    <section class="rooms section content-width" id="rooms">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">ROOM PREVIEW</p>
+          <h2>객실 미리보기 · 비교</h2>
+        </div>
+        <a href="#">객실 더 보기 <span>→</span></a>
+      </div>
+      <div class="room-carousel">
+        <button class="carousel-arrow prev" type="button" aria-label="이전 객실">‹</button>
+        <div class="room-list">
+          <article class="room-card">
+            <img src="img/03-room-ocean-suite.png" alt="오션 스위트 객실">
+            <div>
+              <h3>오션 스위트</h3>
+              <p>2–4인 · 반려견 동반 가능</p>
+              <label>
+                <input type="checkbox"> 비교하기
+              </label>
+            </div>
+          </article>
+          <article class="room-card">
+            <img src="img/04-room-garden-terrace.png" alt="가든 테라스 객실">
+            <div>
+              <h3>가든 테라스</h3>
+              <p>2–4인 · 반려견 동반 가능</p>
+              <label>
+                <input type="checkbox"> 비교하기
+              </label>
+            </div>
+          </article>
+          <article class="room-card">
+            <img src="img/05-room-private-villa.png" alt="프라이빗 풀빌라 객실">
+            <div>
+              <h3>프라이빗 풀빌라</h3>
+              <p>2–4인 · 반려견 동반 가능</p>
+              <label>
+                <input type="checkbox"> 비교하기
+              </label>
+            </div>
+          </article>
+        </div>
+        <button class="carousel-arrow next" type="button" aria-label="다음 객실">›</button>
+      </div>
+    </section>
+
+    <!-- 우리 아이에게 꼭 맞는 객실을 찾아보세요 -->
+    <section class="pet-match" aria-labelledby="match-title">
+      <div class="bubble bubble-blue" aria-hidden="true"></div>
+      <div class="bubble bubble-orange" aria-hidden="true"></div>
+      <div class="bubble bubble-ivory" aria-hidden="true"></div>
+      <div class="content-width match-inner">
+        <p class="eyebrow">PET MATCH FINDER</p>
+        <h2 id="match-title">우리 아이에게 꼭 맞는 객실을 찾아보세요.</h2>
+        <p>나이와 크기, 활동량을 알려주시면 맞춤 객실을 추천해드려요!</p>
+        <form class="match-form">
+          <label>
+            <span class="blind">나이</span>
+            <select>
+              <option>나이</option>
+              <option>1–3살</option>
+              <option>4–7살</option>
+              <option>8살 이상</option>
+            </select>
+          </label>
+          <label>
+            <span class="blind">크기</span>
+            <select>
+              <option>크기</option>
+              <option>소형</option>
+              <option>중형</option>
+              <option>대형</option>
+            </select>
+          </label>
+          <label>
+            <span class="blind">활동량</span>
+            <select>
+              <option>활동량</option>
+              <option>차분해요</option>
+              <option>보통이에요</option>
+              <option>활발해요</option>
+            </select>
+          </label>
+          <button class="btn btn-accent" type="submit">추천 객실 보기</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 멍이랑만의 특별한 공간 -->
+    <section class="facilities section content-width" id="facilities">
+      <div class="section-heading center-heading">
+        <p class="eyebrow">SPECIAL FACILITIES</p>
+        <h2>멍이랑만의 특별한 공간</h2>
+      </div>
+      <div class="facility-grid">
+        <figure class="facility pool">
+          <img src="img/06-special-pool.png" alt="산 전망의 야외 수영장">
+          <figcaption>야외 수영장</figcaption>
+        </figure>
+        <figure class="facility cafe">
+          <img src="img/07-special-pup-cafe.png" alt="따뜻한 분위기의 루프탑 카페">
+          <figcaption>루프탑 카페</figcaption>
+        </figure>
+        <figure class="facility playground">
+          <img src="img/08-special-playground.png" alt="잔디가 넓은 반려견 놀이터">
+          <figcaption>반려견 놀이터</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- stay guide 및 location -->
+    <section class="guide section content-width" id="guide">
+      <article class="guide-card">
+        <div class="guide-image">
+          <img src="img/09-stay-guide-amenities.png" alt="반려견을 위한 객실 어메니티">
+        </div>
+        <div class="guide-copy">
+          <p class="eyebrow">STAY GUIDE</p>
+          <h2>함께 머물기 전 확인해 주세요</h2>
+          <p>
+            동반 가능 기준 · 추가 요금 · 준비된 용품<br>
+            안전하고 편안한 여행을 위한 안내
+          </p>
+          <a href="#">이용안내 보기 <span>→</span></a>
+        </div>
+      </article>
+      <article class="location-card">
+        <div class="location-image">
+          <img src="img/10-location-entrance-parking.png" alt="멍이랑 펜션 입구와 주차장">
+        </div>
+        <div class="location-copy">
+          <p class="eyebrow">LOCATION</p>
+          <h2>멍이랑 오시는 길</h2>
+          <p class="address">경기도 가평군 멍이랑로 123</p>
+          <ul>
+            <li>
+              <span aria-hidden="true">🚗</span>
+              <b>자가용</b>
+              <em>약 1시간 20분 (서울)</em>
+            </li>
+            <li>
+              <span aria-hidden="true">🚉</span>
+              <b>대중교통</b>
+              <em>경춘선 → 가평역 하차 후 버스 탑승</em>
+            </li>
+            <li>
+              <span aria-hidden="true">P</span>
+              <b>주차</b>
+              <em>객실 당 2대까지 가능</em>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-tagline">MUNGIRANG&nbsp;&nbsp; Pet-friendly resort</div>
+    <div class="footer-inner content-width">
+      <div class="footer-brand">
+        <img src="img/Logo.white.png" alt="멍이랑">
+        <p>반려견과 함께 머무는<br>가장 편안한 공간</p>
+      </div>
+      <div class="menu">
+        <h2>MENU</h2>
+        <a href="#rooms">객실</a>
+        <a href="#facilities">시설 안내</a>
+        <a href="#guide">이용안내</a>
+      </div>
+
+      <div class="footer-contact">
+        <h2>CONTACT</h2>
+
+        <a class="contact-row" href="tel:01000000000">
+          <img src="img/icon-phone.png" alt="">
+          <span>010-0000-0000</span>
+        </a>
+
+        <a class="contact-row" href="https://www.instagram.com/mungirang" target="_blank">
+          <img src="img/icon-insta.png" alt="">
+          <span>mungirang</span>
+        </a>
+
+        <div class="contact-row contact-time">
+          <span class="contact-label">상담</span>
+          <span>09:00 - 18:00</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="footer-bottom content-width">
+      <div>
+        <a href="#">이용약관</a>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">고객센터</a>
+      </div>
+      <p>Copyright 2026 MUNGIRANG. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+</html>

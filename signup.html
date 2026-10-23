@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="멍이랑 회원가입">
+  <title>회원가입 | 멍이랑</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/signup.css">
+  <script src="script/signup.js" defer></script>
+</head>
+  <br>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="signup-header">
+    <a class="signup-brand" href="index.html" aria-label="멍이랑 홈으로 이동">
+      <img src="img/Logo.png" alt="멍이랑">
+    </a>
+    <a class="login-link" href="login.html">로그인</a>
+  </header>
+  <br>
+  <main class="signup-main" id="main">
+    <section class="signup-intro" aria-label="회원가입 안내">
+      <div>
+        <p class="eyebrow">MUNGIRANG MEMBER</p>
+        <h1>멍이랑의 새로운<br>가족이 되어주세요.</h1>
+        <p>
+          회원가입 후 예약 내역과 반려견 정보를<br>
+          더 편리하게 관리할 수 있어요.
+        </p>
+      </div>
+      <ol class="step-list" aria-label="회원가입 단계">
+        <li class="active" data-step-indicator="1"><span>01</span>약관 동의</li>
+        <li data-step-indicator="2"><span>02</span>정보 입력</li>
+        <li data-step-indicator="3"><span>03</span>가입 완료</li>
+      </ol>
+    </section>
+
+    <section class="signup-card" aria-live="polite">
+      <div class="step-panel active" data-step="1">
+        <p class="section-label">STEP 01</p>
+        <h2>약관에 동의해 주세요</h2>
+        <p class="section-description">서비스 이용에 필요한 항목을 확인해 주세요.</p>
+
+        <label class="agree-all">
+          <input id="agree-all" type="checkbox">
+          <span>
+            <strong>전체 동의</strong>
+            <small>필수 및 선택 항목에 모두 동의합니다.</small>
+          </span>
+        </label>
+
+        <div class="agreement-list">
+          <label><input class="agreement required" type="checkbox">
+            <span><b>[필수]</b> 이용약관 동의</span>
+            <button type="button" aria-label="이용약관 자세히 보기">보기</button>
+          </label>
+          <label><input class="agreement required" type="checkbox">
+            <span><b>[필수]</b> 개인정보 수집 및 이용 동의</span>
+            <button type="button" aria-label="개인정보 약관 자세히 보기">보기</button>
+          </label>
+          <label><input class="agreement" type="checkbox">
+            <span>[선택] 이벤트 및 혜택 알림 수신</span>
+            <button type="button" aria-label="마케팅 약관 자세히 보기">보기</button>
+          </label>
+        </div>
+        <p class="step-message" role="alert"></p>
+        <button class="primary-button next-button" type="button" data-next="2">동의하고 계속하기</button>
+      </div>
+
+      <form class="step-panel member-form" data-step="2" novalidate>
+        <p class="section-label">STEP 02</p>
+        <h2>회원정보를 입력해 주세요</h2>
+        <p class="section-description">로그인과 예약 확인에 사용할 정보예요.</p>
+
+        <div class="field-grid">
+          <div class="field full">
+            <label for="member-name">이름</label>
+            <input id="member-name" name="name" type="text" autocomplete="name" placeholder="이름을 입력해 주세요" required>
+            <p class="field-error"></p>
+          </div>
+
+          <div class="field full">
+            <label for="member-id">아이디</label>
+            <div class="inline-field">
+              <input id="member-id" name="userId" type="text" autocomplete="username" placeholder="영문·숫자 4자 이상" required>
+              <button class="outline-button id-check" type="button">중복 확인</button>
+            </div>
+            <p class="field-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="member-password">비밀번호</label>
+            <div class="password-field">
+              <input id="member-password" name="password" type="password" autocomplete="new-password" placeholder="영문·숫자 포함 8자 이상" required>
+              <button class="password-toggle" type="button" data-target="member-password" aria-label="비밀번호 보기">보기</button>
+            </div>
+            <p class="field-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="member-password-confirm">비밀번호 확인</label>
+            <div class="password-field">
+              <input id="member-password-confirm" name="passwordConfirm" type="password" autocomplete="new-password" placeholder="비밀번호를 다시 입력해 주세요" required>
+              <button class="password-toggle" type="button" data-target="member-password-confirm" aria-label="비밀번호 확인 보기">보기</button>
+            </div>
+            <p class="field-error"></p>
+          </div>
+
+          <div class="field full">
+            <label for="member-phone">휴대전화</label>
+            <input id="member-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="숫자만 입력해 주세요" required>
+            <p class="field-error"></p>
+          </div>
+        </div>
+
+        <div class="button-row">
+          <button class="secondary-button prev-button" type="button" data-prev="1">이전</button>
+          <button class="primary-button" type="submit">회원가입 완료</button>
+        </div>
+      </form>
+
+      <div class="step-panel complete-panel" data-step="3">
+        <div class="complete-icon" aria-hidden="true">✓</div>
+        <p class="section-label">WELCOME</p>
+        <h2>멍이랑 회원이 되신 것을<br>환영합니다!</h2>
+        <p>
+          가입한 아이디로 로그인하고<br>
+          반려견과의 여행을 시작해 보세요.
+        </p>
+        <a class="primary-button" href="login.html">로그인하러 가기</a>
+        <a class="home-link" href="index.html">홈으로 돌아가기</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="signup-footer">
+    <p>MUNGIRANG&nbsp;&nbsp; Pet-friendly resort</p>
+    <span>© 2026 MUNGIRANG</span>
+  </footer>
+</body>
+</html>

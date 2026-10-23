@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="멍이랑 회원 로그인">
+  <title>로그인 | 멍이랑</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css">
+  <script src="script/login.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="login-header">
+    <a class="login-brand" href="index.html" aria-label="멍이랑 홈으로 이동">
+      <img src="img/Logo.png" alt="멍이랑">
+    </a>
+    <a class="back-home" href="index.html"><span aria-hidden="true">←</span> 홈으로</a>
+  </header>
+  <main class="login-main" id="main">
+    <section class="login-visual" aria-label="멍이랑 펜션 풍경">
+      <img src="img/02-about-lounge.png" alt="햇살이 들어오는 멍이랑 라운지">
+      <div class="visual-copy">
+        <p>PET-FRIENDLY RESORT</p>
+        <h1>다시 만나서<br>반가워요.</h1>
+        <span>멍이랑에서 반려견과의 다음 여행을 이어가세요.</span>
+      </div>
+    </section>
+
+    <section class="login-panel" aria-labelledby="login-title">
+      <div class="login-panel-inner">
+        <p class="eyebrow">MUNGIRANG MEMBER</p>
+        <h2 id="login-title">멍이랑 시작하기</h2>
+        <p class="login-intro">로그인하거나 새 계정을 만들어 여행을 이어가세요.</p>
+
+        <div class="reservation-notice" hidden>
+          <span aria-hidden="true">●</span>
+          <p><strong>예약을 계속하려면 로그인이 필요해요.</strong><br>로그인 후 선택한 예약 단계로 돌아갑니다.</p>
+        </div>
+
+        <div class="auth-tabs" role="tablist" aria-label="회원 메뉴">
+          <button class="auth-tab active" id="login-tab" type="button" role="tab" aria-selected="true" aria-controls="login-panel">로그인</button>
+          <button class="auth-tab" id="signup-tab" type="button" role="tab" aria-selected="false" aria-controls="signup-panel">
+            <a href="signup.html">회원가입</a>
+          </button>
+        </div>
+
+        <form class="login-form auth-panel active" id="login-panel" role="tabpanel" aria-labelledby="login-tab" novalidate>
+          <div class="field">
+            <label for="user-id">아이디</label>
+            <input id="user-id" name="userId" type="text" autocomplete="username" placeholder="아이디를 입력해 주세요" required>
+            <p class="field-error" id="id-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="user-password">비밀번호</label>
+            <div class="password-field">
+              <input id="user-password" name="password" type="password" autocomplete="current-password" placeholder="비밀번호를 입력해 주세요" required minlength="8">
+              <button class="password-toggle" type="button" aria-label="비밀번호 보기" aria-pressed="false">보기</button>
+            </div>
+            <p class="field-error" id="password-error" aria-live="polite"></p>
+          </div>
+
+          <div class="login-options">
+            <label class="remember">
+              <input type="checkbox" name="remember">
+              <span>로그인 유지</span>
+            </label>
+            <button class="find-password" type="button">비밀번호 찾기</button>
+          </div>
+
+          <button class="login-button" type="submit">로그인</button>
+          <p class="form-message" aria-live="polite"></p>
+        </form>
+
+        <div class="join-box login-only">
+          <div><strong>아직 멍이랑 회원이 아니신가요?</strong>
+            <p>회원가입하고 예약 정보를 편리하게 관리해 보세요.</p>
+          </div>
+          <button class="text-tab-link" type="button" data-open-tab="signup">회원가입 
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+
+        <form class="signup-form auth-panel" id="signup-panel" role="tabpanel" aria-labelledby="signup-tab" hidden novalidate>
+          <div class="field">
+            <label for="signup-name">이름</label>
+            <input id="signup-name" name="signupName" type="text" autocomplete="name" placeholder="이름을 입력해 주세요" required>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="signup-phone">휴대전화</label>
+            <input id="signup-phone" name="signupPhone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="숫자만 입력해 주세요" required>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="signup-id">아이디</label>
+            <input id="signup-id" name="signupId" type="text" autocomplete="username" placeholder="사용할 아이디를 입력해 주세요" required>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="signup-password">비밀번호</label>
+            <input id="signup-password" name="signupPassword" type="password" autocomplete="new-password" placeholder="영문·숫자 포함 8자 이상" minlength="8" required>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="signup-password-confirm">비밀번호 확인</label>
+            <input id="signup-password-confirm" name="signupPasswordConfirm" type="password" autocomplete="new-password" placeholder="비밀번호를 다시 입력해 주세요" required>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+
+          <label class="agreement">
+            <input type="checkbox" name="agreement" required>
+            <span><b>[필수]</b> 이용약관 및 개인정보 수집에 동의합니다.</span>
+          </label>
+
+          <button class="login-button signup-button" type="submit">동의하고 회원가입</button>
+          <p class="form-message signup-message" aria-live="polite"></p>
+        </form>
+
+        <form class="reset-form auth-panel" id="reset-panel" hidden novalidate>
+          <button class="reset-back" type="button" data-open-tab="login">
+            <span aria-hidden="true">←</span> 로그인으로 돌아가기
+          </button>
+          <h3>비밀번호 찾기</h3>
+          <p class="reset-intro">가입한 아이디와 휴대전화를 입력하면<br>본인 확인 절차를 안내해 드립니다.</p>
+          <div class="field">
+            <label for="reset-id">아이디</label>
+            <input id="reset-id" name="resetId" type="text" autocomplete="username" placeholder="아이디를 입력해 주세요" required>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="reset-phone">휴대전화</label>
+            <input id="reset-phone" name="resetPhone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="숫자만 입력해 주세요" required>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+          <button class="login-button" type="submit">본인 확인하기</button>
+          <p class="form-message reset-message" aria-live="polite"></p>
+        </form>
+
+        <p class="login-help">이용에 어려움이 있으신가요? <a href="tel:01000000000">010-0000-0000</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="login-footer">
+    <p>MUNGIRANG&nbsp;&nbsp; Pet-friendly resort</p>
+    <span>© 2026 MUNGIRANG</span>
+  </footer>
+</body>
+</html>

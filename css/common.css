@@ -1,0 +1,108 @@
+:root {
+  --main: #627B68;
+  --deep: #263B30;
+  --bg: #FAF8F2;
+  --accent: #F1B984;
+  --sky: #A9CDD0;
+  --line: #D8DED7;
+  --sub: #EDF1EB;
+  --text: #303833;
+  --white: #fff;
+  --max: 1200px;
+  --radius: 28px;
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Noto Sans KR", "Wanted Sans", sans-serif;
+  line-height: 1.55;
+}
+
+.content-width {
+  width: min(calc(100% - 80px), var(--max));
+  margin-inline: auto;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 20px;
+  z-index: 1000;
+  padding: 12px 18px;
+  background: var(--deep);
+  color: #fff;
+}
+
+.skip-link:focus {
+  top: 20px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  color: var(--text);
+}
+
+.btn-primary {
+  background: var(--main);
+  color: #fff;
+}
+
+.btn-dark {
+  background: var(--deep);
+  color: #fff;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--deep);
+}
+
+.btn-accent:hover {
+  background: var(--sky);
+  color: var(--main);
+}
+
+
+.section {
+  padding-block: 120px;
+}
+
+.section h2 {
+  color: var(--deep);
+  font-size: 40px;
+  line-height: 1.28;
+}
+
+header {
+  position: relative;
+  z-index: 50;
+  height: 110px;
+  background: var(--bg);
+}
